@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+        <h1 class="form-title">Get Crop Recommendation</h1>
+        <form action="/predict" method="post">
+            <div class="form-group">
+                <input type="number" id="nitrogen" name="nitrogen" placeholder="Nitrogen (N)" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="phosphorous" name="phosphorous" placeholder="Phosphorous (P)" required>
+            </div>
+            <div class="form-group">
+                <input type="number" id="potassium" name="potassium" placeholder="Potassium (K)" required>
+            </div>
+            <div class="form-group">
+                <input type="number" step="0.01" id="temperature" name="temperature" placeholder="Temperature (°C)" required>
+            </div>
+            <div class="form-group">
+                <input type="number" step="0.01" id="humidity" name="humidity" placeholder="Humidity (%)" required>
+            </div>
+            <div class="form-group">
+                <input type="number" step="0.01" id="ph" name="ph" placeholder="pH Level" required>
+            </div>
+            <div class="form-group">
+                <input type="number" step="0.01" id="rainfall" name="rainfall" placeholder="Rainfall (mm)" required>
+            </div>
+            <button type="submit" class="btn">Get Recommendation</button>
+        </form>
+        <a href="/" class="back-btn">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="result-container">
+        <h1>Recommendation Result</h1>
+        <div class="result">
+            <p>The most suitable crop for your farm is:</p>
+            <p class="crop">{{ prediction }}</p>
+        </div>
+        <a href="/recommend" class="btn">Try Again</a>
+        <a href="/" class="back-btn">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
